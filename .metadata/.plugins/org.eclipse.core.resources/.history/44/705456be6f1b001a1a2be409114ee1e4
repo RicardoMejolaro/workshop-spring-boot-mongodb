@@ -1,0 +1,5 @@
+package com.educandoweb.workshopmongodb.resources;
+
+public class UserResource {
+
+}
