@@ -1,0 +1,5 @@
+package com.educandoweb.workshopmongodb.services;
+
+public class UserService {
+
+}

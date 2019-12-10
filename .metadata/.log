@@ -756,3 +756,52 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:15.649
+!MESSAGE Preparing classpath changed notification workshopmongodb
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:17.139
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:18.190
+!MESSAGE classpath=86 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:18.653
+!MESSAGE buffering callback sts4.classpath.XWbdyibB workshopmongodb false 86
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:18.828
+!MESSAGE executing callback sts4.classpath.XWbdyibB 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:20.013
+!MESSAGE executing callback sts4.classpath.XWbdyibB SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:38.418
+!MESSAGE Preparing classpath changed notification workshopmongodb
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:38.680
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:38.979
+!MESSAGE classpath=86 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:39.200
+!MESSAGE buffering callback sts4.classpath.XWbdyibB workshopmongodb false 86
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:39.283
+!MESSAGE executing callback sts4.classpath.XWbdyibB 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-10 16:23:39.362
+!MESSAGE executing callback sts4.classpath.XWbdyibB SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2019-12-10 16:30:19.972
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2022)
+	at org.springframework.tooling.boot.ls.jdt.LSPTextHover.getHoverInfo(LSPTextHover.java:109)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
