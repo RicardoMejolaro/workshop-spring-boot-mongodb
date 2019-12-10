@@ -1,0 +1,28 @@
+package com.educandoweb.workshopmongodb.dto;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.educandoweb.workshopmongodb.domain.User;
+
+@Document
+public class UserDTO {
+
+	@Id
+	private String id;
+	private String name;
+	private String email;
+	
+	public UserDTO() {
+	}
+	
+	public UserDTO(User obj) {
+		
+		obj.getId();
+		obj.getName();
+		obj.getEmail();
+	}
+
+	
+}
+
