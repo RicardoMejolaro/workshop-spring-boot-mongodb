@@ -1,0 +1,5 @@
+package com.educandoweb.workshopmongodb.config;
+
+public class Instantiation {
+
+}
