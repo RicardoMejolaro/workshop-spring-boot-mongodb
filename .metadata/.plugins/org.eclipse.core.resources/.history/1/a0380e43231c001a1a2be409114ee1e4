@@ -37,7 +37,7 @@ public class UserService {
 	
 	public void deleteUser(String id) {
 		findById(id);
-		userRepository.deleteById(id);
+		userRepository.delete(id); 
 	}
 	
 	public User fromDTO(UserDTO objDto) {

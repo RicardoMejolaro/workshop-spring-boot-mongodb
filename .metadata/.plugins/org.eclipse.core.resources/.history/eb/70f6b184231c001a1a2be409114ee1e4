@@ -51,11 +51,11 @@ public class UserResource {
 	}
 	
 	@RequestMapping(value = "/{id}", method=RequestMethod.DELETE)
-	public ResponseEntity<Void> deleteUser(@PathVariable String id){
+	public ResponseEntity<void> deleteUser(@PathVariable String id){
 		
 		userService.deleteUser(id);
 	
-		return ResponseEntity.noContent().build();
+		return ResponseEntity.ok().body(new UserDTO(obj));
 	}
 
 }
