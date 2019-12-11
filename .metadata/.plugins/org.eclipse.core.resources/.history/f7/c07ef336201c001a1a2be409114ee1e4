@@ -46,8 +46,7 @@ public class UserResource {
 		
 		User obj = userService.fromDTO(objDto);
 		obj = userService.insertUser(obj);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{/id}").buildAndExpand(obj.getId()).toUri();
-		return ResponseEntity.created(uri).build();
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{/id}").buildAndExpand(obj.getId()).toUri());
 	}
 
 }
