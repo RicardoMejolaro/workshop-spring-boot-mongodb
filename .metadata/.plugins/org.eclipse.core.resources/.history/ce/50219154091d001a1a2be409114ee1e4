@@ -44,7 +44,7 @@ public class PostService {
 	
 	public List<Post> fullSearch(String text, Date dateMin, Date dateMax){
 		
-		dateMax = new Date(dateMax.getTime() * 24 * 60 * 60 * 1000);
+		dateMax = new Date(dateMax.getTime() + 24 * 60 * 60 * 1000);
 		return postRepository.fullSearch(text, dateMin, dateMax);
 	}
 }

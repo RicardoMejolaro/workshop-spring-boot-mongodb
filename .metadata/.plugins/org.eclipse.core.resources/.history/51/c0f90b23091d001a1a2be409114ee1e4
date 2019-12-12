@@ -54,8 +54,8 @@ public class PostResource {
 			@RequestParam(value = "dateMax", defaultValue = "") String dateMax){
 		text = URL.decodeParam(text);
 		Date min = URL.convertDate(dateMin, new Date(0L));
-		Date max = URL.convertDate(dateMax, new Date());
-		List<Post> list = postService.fullSearch(text, min, max);
+		Date max = URL.convertDate(dateMax, new Date(24L));
+		List<Post> list = postService.fullSearch(text, dateMin, dateMax);
 	
 		return ResponseEntity.ok().body(list);
 	}

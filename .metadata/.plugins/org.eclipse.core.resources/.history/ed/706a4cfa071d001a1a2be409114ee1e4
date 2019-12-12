@@ -1,6 +1,5 @@
 package com.educandoweb.workshopmongodb.resources;
 
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,24 +37,23 @@ public class PostResource {
 		return ResponseEntity.noContent().build();
 	}	
 	
-	
 	@RequestMapping(value="/titlesearch", method=RequestMethod.GET)
-	public ResponseEntity<List<Post>> fullSearch(@RequestParam(value = "text", defaultValue = "") String text){
+	public ResponseEntity<List<Post>> findByTitle(
+			@RequestParam(value = "text", defaultValue = "") String text,
+			@RequestParam(value = "dateMin", defaultValue = "") String dateMin,
+			@RequestParam(value = "dateMax", defaultValue = "") String dateMax){
 		text = URL.decodeParam(text);
+		text = URL.decodeParam(dateMin);
+		text = URL.decodeParam(dateMax);
 		List<Post> list = postService.findByTitle(text);
 	
 		return ResponseEntity.ok().body(list);
 	}
 	
 	@RequestMapping(value="/fullsearch", method=RequestMethod.GET)
-	public ResponseEntity<List<Post>> fullSearch(
-			@RequestParam(value = "text", defaultValue = "") String text,
-			@RequestParam(value = "dateMin", defaultValue = "") String dateMin,
-			@RequestParam(value = "dateMax", defaultValue = "") String dateMax){
+	public ResponseEntity<List<Post>> fullSearch(@RequestParam(value = "text", defaultValue = "") String text){
 		text = URL.decodeParam(text);
-		Date min = URL.convertDate(dateMin, new Date(0L));
-		Date max = URL.convertDate(dateMax, new Date());
-		List<Post> list = postService.fullSearch(text, min, max);
+		List<Post> list = postService.findByTitle(text);
 	
 		return ResponseEntity.ok().body(list);
 	}
