@@ -16,6 +16,11 @@ public class PostService {
 	@Autowired
 	private PostRepository postRepository;
 	
+	public List<Post> findAll() {
+		
+		return postRepository.findAll();
+	}
+	
 	public Post findById(String id) {
 		
 		Optional<Post> post = postRepository.findById(id);
@@ -27,10 +32,5 @@ public class PostService {
 	public void deletePost(String id) {
 		findById(id);
 		postRepository.deleteById(id);
-	}
-	
-	public List<Post> findByTitle(String text){
-		
-		return postRepository.findByTitleContainingIgnoreCase(text);
 	}
 }
