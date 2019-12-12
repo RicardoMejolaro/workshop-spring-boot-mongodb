@@ -11,11 +11,8 @@ import com.educandoweb.workshopmongodb.domain.Post;
 @Repository
 public interface PostRepository extends MongoRepository<Post, String> {
 	
-	//Pesquisa com @Query
 	@Query("{ 'title': { $regex: ?0, $options: 'i' } }")
 	List<Post> searchTitle(String text);
 
-	/*Pesquisa com Method
 	List<Post> findByTitleContainingIgnoreCase(String text);
-	*/
 }
